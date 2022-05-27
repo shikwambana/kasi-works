@@ -13,6 +13,7 @@ import { ProfessionalComponent } from './components/userDetails/professional/pro
 import { SkillsComponent } from './components/userDetails/skills/skills.component';
 import { HobbiesComponent } from './components/userDetails/hobbies/hobbies.component';
 import { HomeComponent } from './components/home/home.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
@@ -43,7 +44,8 @@ const analytics = getAnalytics(app);
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
