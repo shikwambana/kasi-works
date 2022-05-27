@@ -6,6 +6,13 @@ import { AppComponent } from './app.component';
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
+import { LoginComponent } from './components/signUp/login/login.component';
+import { RegisterComponent } from './components/signUp/register/register.component';
+import { PersonalComponent } from './components/userDetails/personal/personal.component';
+import { ProfessionalComponent } from './components/userDetails/professional/professional.component';
+import { SkillsComponent } from './components/userDetails/skills/skills.component';
+import { HobbiesComponent } from './components/userDetails/hobbies/hobbies.component';
+import { HomeComponent } from './components/home/home.component';
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
@@ -25,7 +32,14 @@ const analytics = getAnalytics(app);
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    LoginComponent,
+    RegisterComponent,
+    PersonalComponent,
+    ProfessionalComponent,
+    SkillsComponent,
+    HobbiesComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
