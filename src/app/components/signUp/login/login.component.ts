@@ -21,9 +21,8 @@ export class LoginComponent implements OnInit {
   get password() {
     return this.registerForm.get('password');
   }
-
   newUserInputs() {
-    console.warn(this.registerForm.value);
+    console.log(this.registerForm.value);
   }
 
   constructor() {}

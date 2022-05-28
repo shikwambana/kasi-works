@@ -1,34 +1,39 @@
 <p>login works!</p>
-<button routerLink="/register">Register here</button>
-<router-outlet></router-outlet>
 
 <form [formGroup]="registerForm" (ngSubmit)="newUserInputs()">
   <h1>Welcome to...</h1>
   <p>Log in to your account</p>
 
   <div>
-    <p>Email</p>
     <mat-form-field appearance="outline">
       <input
         type="email"
         matInput
         placeholder="example@email.com"
         formControlName="email"
-      />
+      /><mat-error class="errorMessage"
+      *ngIf="email && email.invalid && email.touched"
+      >This field is required</mat-error
+      >
     </mat-form-field>
   </div>
 
   <div>
-    <p>Password</p>
     <mat-form-field appearance="outline">
       <input
         type="password"
         matInput
         placeholder="Password"
         formControlName="password"
-      />
+      /><mat-error class="errorMessage"
+      *ngIf="password && password.invalid && password.touched"
+      >This field is required</mat-error
+      >
     </mat-form-field>
   </div>
 
-  <button type="submit" [disabled]="registerForm.invalid">Submit</button>
+  <button type="submit" [disabled]="registerForm.invalid">Login</button>
 </form>
+<p>Don't have an account? <a routerLink="/register">Register</a></p>
+<!-- <router-outlet></router-outlet> -->
+

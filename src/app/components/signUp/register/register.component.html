@@ -1,19 +1,19 @@
 <p>register works!</p>
-<button routerLink="/login">Login here</button>
-<router-outlet></router-outlet>
 
 <form [formGroup]="registerForm" (ngSubmit)="registerNewUser()">
   <h1>Welcome to...</h1>
   <p>Create a new account</p>
   <div>
-    <p>Full Name</p>
     <mat-form-field appearance="outline">
-      <input matInput placeholder="eg. John Doe" formControlName="fullName" />
+      <input matInput placeholder="Full name" formControlName="fullName" />
+      <mat-error class="errorMessage"
+      *ngIf="fullName && fullName.invalid && fullName.touched"
+      >This field is required</mat-error
+      >
     </mat-form-field>
   </div>
 
   <div>
-    <p>Email</p>
     <mat-form-field appearance="outline">
       <input
         type="email"
@@ -21,34 +21,41 @@
         placeholder="example@email.com"
         formControlName="email"
       />
+      <mat-error class="errorMessage"
+      *ngIf="email && email.invalid && email.touched"
+      >This field is required</mat-error
+      >
     </mat-form-field>
   </div>
 
   <div>
-    <p>Phone Number</p>
     <mat-form-field appearance="outline">
       <input
         type="tel"
         matInput
         placeholder="0123456789"
         formControlName="phoneNumber"
-      />
+      /><mat-error class="errorMessage"
+      *ngIf="phoneNumber && phoneNumber.invalid && phoneNumber.touched"
+      >This field is required</mat-error
+      >
     </mat-form-field>
   </div>
 
   <div>
-    <p>Create a password</p>
     <mat-form-field appearance="outline">
       <input
         type="password"
         matInput
         placeholder="Password"
         formControlName="password"
-      />
+      /><mat-error class="errorMessage"
+      *ngIf="password && password.invalid && password.touched"
+      >This field is required</mat-error
+      >
     </mat-form-field>
   </div>
   <div>
-    <p>Confirm password</p>
     <mat-form-field appearance="outline">
       <input
         type="password"
@@ -56,8 +63,13 @@
         placeholder="Confirm password"
         formControlName="confirmPassword"
       />
+      <mat-error class="errorMessage"
+      *ngIf="confirmPassword && confirmPassword.invalid && confirmPassword.touched"
+      >This field is required</mat-error
+      >
     </mat-form-field>
   </div>
 
-  <button type="submit" [disabled]="registerForm.invalid">Submit</button>
+  <button type="submit" [disabled]="registerForm.invalid">Create account</button>
 </form>
+<p>Already have an account? <a routerLink="/login">Login</a></p>

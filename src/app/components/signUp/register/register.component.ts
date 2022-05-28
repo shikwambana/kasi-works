@@ -22,13 +22,11 @@ export class RegisterComponent implements OnInit {
     confirmPassword: new FormControl('', [Validators.required]),
   });
 
-  registerNewUser() {
-    console.warn(this.registerForm.value);
-  }
-  get fullName() {
-    return this.registerForm.get('fullName');
-  }
-  get email() {
+
+get fullName() {
+  return this.registerForm.get('fullName');
+}
+get email() {
     return this.registerForm.get('email');
   }
   get phoneNumber() {
@@ -40,7 +38,10 @@ export class RegisterComponent implements OnInit {
   get confirmPassword() {
     return this.registerForm.get('confirmPassword');
   }
-
+  
+  registerNewUser() {
+    console.log(this.registerForm.value);
+  }
   constructor() {}
 
   ngOnInit(): void {}
