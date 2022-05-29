@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,OAAO,CAAC;EACJ,KAAK,EAAE,GACX;CAAC;;AAED,AAAA,SAAS,CAAC;EACN,KAAK,EAAE,GAAG;CACb",
+    "sources": [
+        "personal.component.scss"
+    ],
+    "names": [],
+    "file": "personal.component.css"
+}
