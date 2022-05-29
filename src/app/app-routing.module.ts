@@ -29,7 +29,13 @@ const routes: Routes = [
     },
     {
       path: 'skills-info', component: SkillsComponent
-    }
+    },
+    // {
+    //   path: 'register', component: RegisterComponent
+    // },
+    // {
+    //   path: 'login', component: LoginComponent
+    // }
     
   ]
 }

@@ -1,27 +1,33 @@
-<p>home works!</p>
+<!-- <p>home works!</p>
 <button routerLink="/personal-info">Personal Info</button>
 <button routerLink="/professional-info">professional Info</button>
-
-
 <button routerLink="/login">Login here</button>
-<button routerLink="/register">Register here</button>
-<router-outlet></router-outlet>
+<button routerLink="/register">Register here</button> -->
 
 <!-- !!Start of header -->
-<div class="headerDiv" fxLayout="row" fxLayoutAlign="start center">
-    <img src="" alt="logo" width="60px" height="36px"/>
+<div class="headerDiv" fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="10px">
+    <img src="https://www.kindpng.com/picc/m/193-1933278_green-transparent-leaf-logo-hd-png-download.png" alt="logo" width="60px" height="36px"/>
     <h1>M-Ploy</h1>
     <p>| Success at your fingertips |</p>
+</div>
 
-  </div>
-  
-<!-- !!Start of left panel -->
-<div fxLayout="column" fxLayoutAlign=" center" >
-    <p>Define success on your own terms</p>
-    <img src="" alt="logo" width="595" height="355"/>
-    <h1>M-Ploy</h1>
-    <p>| CV Builder |</p>
-    <p>Success at your fingertips</p>
-  </div>
-  
-<!-- !!Start of right panel -->
+<div fxLayout="row" fxLayoutAlign="space-around" fxLayout.xs="column" fxLayoutAlign.xs="center stretch">
+    <!-- !!Start of left panel -->
+    <div fxLayout="column" fxLayoutAlign=" center" >
+        <h3>Define success on your own terms</h3>
+        <img src="https://www.kindpng.com/picc/m/193-1933278_green-transparent-leaf-logo-hd-png-download.png" alt="logo" width="545" height="355"/>
+        <h1>M-Ploy</h1>
+        <p>| CV Builder |</p>
+        <p>Success at your fingertips</p>
+    </div>
+    
+    <!-- !!Start of right panel -->
+    <div fxLayout="column" fxLayoutAlign="center center" >
+        <h1>Hi there</h1>
+        <h3>Welcome to M-Ploy</h3>
+        <h3>The first step to revolutionizing your career, starting with the perfect CV</h3>
+        <p>If you're new here, you should <a routerLink="/register">register</a> a new account</p>
+        <p>For our returning users, you can <a routerLink="/login">login</a> here</p>
+    </div>
+</div>
+<router-outlet></router-outlet>

@@ -1,4 +1,4 @@
-<p>login works!</p>
+<div fxLayout="column" fxLayoutAlign="center center" >
 
 <form [formGroup]="registerForm" (ngSubmit)="newUserInputs()">
   <h1>Welcome to...</h1>
@@ -11,6 +11,7 @@
         matInput
         placeholder="example@email.com"
         formControlName="email"
+        
       /><mat-error class="errorMessage"
       *ngIf="email && email.invalid && email.touched"
       >This field is required</mat-error
@@ -37,3 +38,4 @@
 <p>Don't have an account? <a routerLink="/register">Register</a></p>
 <!-- <router-outlet></router-outlet> -->
 
+</div>

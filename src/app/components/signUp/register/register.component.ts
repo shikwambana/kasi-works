@@ -7,7 +7,8 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
   styleUrls: ['./register.component.scss'],
 })
 export class RegisterComponent implements OnInit {
-
+  // TODO make form invalid
+passwordsMatch: boolean = true;
   newUserDetails: any[]= []
   registerForm = new FormGroup({
     fullName: new FormControl('', [Validators.required]),
@@ -20,7 +21,8 @@ export class RegisterComponent implements OnInit {
     ]),
     password: new FormControl('', [Validators.required]),
     confirmPassword: new FormControl('', [Validators.required]),
-  });
+  }
+  );
 
 
 get fullName() {
@@ -38,9 +40,18 @@ get email() {
   get confirmPassword() {
     return this.registerForm.get('confirmPassword');
   }
+  checkPasswords() {
+    if(this.password !== this.confirmPassword){
+      this.confirmPassword?.setErrors([this.passwordsMatch = false]);
+    }
+  }
+
   
   registerNewUser() {
-    console.log(this.registerForm.value);
+    console.log("form values", this.registerForm.value);
+    this.newUserDetails = this.registerForm.value
+    console.log("user details", this.newUserDetails);
+    sessionStorage.setItem("register data", JSON.stringify([this.newUserDetails]));
   }
   constructor() {}
 
