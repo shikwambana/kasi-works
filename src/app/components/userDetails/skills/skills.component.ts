@@ -43,14 +43,18 @@ export class SkillsComponent implements OnInit {
   }
 
   removeSkills(index: number) {
-    const control = <FormArray>this.skillsForm.controls.skillsArray;
-    control.removeAt(index);
+   
+    if(index>0){
+      const control = <FormArray>this.skillsForm.controls.skillsArray;
+      control.removeAt(index);
+    }
+    
   }
 
   onSubmit(details) {
     console.log(details);
   }
-  get func() {
+  get validation() {
     return this.skillsForm.controls;
   }
 }
