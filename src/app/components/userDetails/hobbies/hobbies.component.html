@@ -1,1 +1,53 @@
 <p>hobbies works!</p>
+<!-- Hobbies:
+  type:the category of the hobbies={
+      general
+sports_and_outdoors
+education
+collection
+competition
+observation
+  } 
+Name :name of the hobbies 
+Description:Description of the hobbies 
+ -->
+<!-- <h3>Select hobbies</h3>
+    <mat-form-field class="example-full-width" appearance="fill">
+      
+        <mat-label>Hobbies Category</mat-label>
+        <mat-select formControlName="categoriesOfHobbies">
+            <mat-option *ngFor="let type of categoriesOfHobbies" [value]="type">
+            {{type}}
+            </mat-option>
+        </mat-select>
+    </mat-form-field>
+    <mat-form-field >
+        <mat-label>Hobbies</mat-label>
+        <input type="text" matInput placeholder="Enter a short description of the hobbie here" formControlName="discripOfHobbie"/>
+    </mat-form-field> -->
+<form [formGroup]="hobbiesForm"  (ngSubmit)="onSubmit(hobbiesForm)">
+
+    <div formArrayName="hobbies">
+        <div *ngFor="let category of hobbiesForm.controls.hobbies['controls'];let i=index" [formGroupName]="i" style="width:100%">
+            <mat-form-field class="example-full-width" appearance="outline">
+                <mat-label>Hobbies Category</mat-label>
+                <mat-select formControlName="category">
+                    <mat-option *ngFor="let type of  categoriesOfHobbies" [value]="type" >
+                        {{type}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label>Hobbies</mat-label>
+                    <textarea matInput placeholder="Enter a short description of the hobbie here"
+                   formControlName="discripOfHobbie" ></textarea>
+            </mat-form-field>
+            <button mat-raised-button (click)="addHobbies()">add</button>
+            <button mat-raised-button [disabled]="i==0" (click)="removeHobbies(i)">remove</button>
+        </div>
+        <button mat-raised-button type="submit">Submit</button>
+        <!-- <div></div> -->
+    </div>
+
+
+</form>

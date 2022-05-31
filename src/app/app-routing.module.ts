@@ -5,8 +5,11 @@ import { LoginComponent } from './components/signUp/login/login.component';
 import { RegisterComponent } from './components/signUp/register/register.component';
 import { PersonalComponent } from './components/userDetails/personal/personal.component';
 import { ProfessionalComponent } from './components/userDetails/professional/professional.component';
-
+import { HobbiesComponent } from './components/userDetails/hobbies/hobbies.component';
 const routes: Routes = [
+  {
+    path: 'hobbies', component: HobbiesComponent
+  },
   {
     path: 'login', component: LoginComponent
   },
