@@ -1,12 +1,14 @@
 <form [formGroup]="skillsForm" fxFlexAlign="center">
   <div formArrayName="skillsArray" class="center">
     <div>
+        <h1 fxLayout="column"
+        fxLayoutAlign="space-between center">skills</h1>
       <div *ngFor="let control of skillsForm.controls.skillsArray['controls'];
           let i = index"
         [formGroupName]="i"
         fxLayout="column"
         fxLayoutAlign="space-between center">
-
+        
         <mat-form-field appearance="outline">
           <mat-label>skills</mat-label>
           <mat-select required formControlName="type">

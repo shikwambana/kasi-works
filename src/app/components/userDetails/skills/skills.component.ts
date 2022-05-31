@@ -6,6 +6,7 @@ import {
   Validators,
   FormArray,
 } from '@angular/forms';
+import { SkillsSeviceService } from 'src/app/skills-sevice.service';
 
 @Component({
   selector: 'app-skills',
@@ -16,7 +17,8 @@ export class SkillsComponent implements OnInit {
   skills: any = ['Medicine', 'Science', 'sport', 'IT', 'Artistry', 'design'];
   levels: any = [1, 2, 3, 4, 5];
   skillsFormArr: FormGroup;
-  constructor(private fb: FormBuilder) {}
+  storeArray:any=[];
+  constructor(private fb: FormBuilder , private service:SkillsSeviceService ) {}
 
   ngOnInit(): void {}
   skillsForm = new FormGroup({
@@ -51,8 +53,10 @@ export class SkillsComponent implements OnInit {
     
   }
 
-  onSubmit(details) {
-    console.log(details);
+  onSubmit(details:any):any {
+    console.log(details.value);
+    this.service.AddStudent(details);
+    
   }
   get validation() {
     return this.skillsForm.controls;
