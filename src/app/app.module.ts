@@ -26,6 +26,11 @@ import {MatRadioModule} from '@angular/material/radio';
 import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
 import { FlexLayoutModule } from '@angular/flex-layout';
+
+import { AngularFireModule } from '@angular/fire/compat';
+import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
+import { environment } from '../environments/environment';
+import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
@@ -55,6 +60,9 @@ const analytics = getAnalytics(app);
     HomeComponent
   ],
   imports: [
+    AngularFireModule.initializeApp(firebaseConfig),
+    AngularFirestoreModule,
+    AngularFireDatabaseModule,
     BrowserModule,
     AppRoutingModule,
     FlexLayoutModule,

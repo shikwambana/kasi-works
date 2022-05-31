@@ -1,8 +1,18 @@
-.resize {
-  width: 47%;
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  font-size: 10px;
 }
 
-.width100 {
-  width: 80%;
+.mainContainer {
+  width: 100%;
+  height: 90vh;
+  background: -webkit-gradient(linear, left bottom, right top, from(#009000), to(#b7ac0a));
+  background: linear-gradient(to top right, #009000 0%, #b7ac0a 100%);
+}
+
+.resize {
+  width: 47%;
 }
 /*# sourceMappingURL=personal.component.css.map */
