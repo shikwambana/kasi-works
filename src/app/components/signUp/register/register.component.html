@@ -1,1 +1,81 @@
-<p>register works!</p>
+<div fxLayout="column" fxLayoutAlign="center center">
+
+<form [formGroup]="registerForm" (ngSubmit)="registerNewUser()">
+    <h1>Welcome to M-Ploy</h1>
+    <p>Create a new account</p>
+    <div>
+      <mat-form-field appearance="outline">
+        <input matInput placeholder="Full name" formControlName="fullName" />
+        <mat-error class="errorMessage"
+        *ngIf="fullName && fullName.invalid && fullName.touched"
+        >This field is required</mat-error
+        >
+      </mat-form-field>
+    </div>
+  
+    <div>
+      <mat-form-field appearance="outline">
+        <input
+          type="email"
+          matInput
+          placeholder="example@email.com"
+          formControlName="email"
+        />
+        <mat-error class="errorMessage"
+        *ngIf="email && email.invalid && email.touched"
+        >This field is required</mat-error
+        >
+        
+      </mat-form-field>
+    </div>
+  
+    <div>
+      <mat-form-field appearance="outline">
+        <input
+          type="tel"
+          matInput
+          placeholder="0123456789"
+          formControlName="phoneNumber"
+        /><mat-error class="errorMessage"
+        *ngIf="phoneNumber && phoneNumber.invalid && phoneNumber.touched"
+        >This field is required</mat-error
+        >
+      </mat-form-field>
+    </div>
+  
+    <div>
+      <mat-form-field appearance="outline">
+        <input
+          type="password"
+          matInput
+          placeholder="Password"
+          formControlName="password"
+        /><mat-error class="errorMessage"
+        *ngIf="password && password.invalid && password.touched"
+        >This field is required</mat-error
+        >
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field appearance="outline">
+        <input
+          type="password"
+          matInput
+          placeholder="Confirm password"
+          formControlName="confirmPassword"
+        />
+        <mat-error class="errorMessage"
+        *ngIf="confirmPassword && confirmPassword.invalid && confirmPassword.touched"
+        >This field is required</mat-error
+        ><mat-error class="errorMessage"
+        *ngIf="!passwordsMatch && confirmPassword && confirmPassword.invalid && confirmPassword.touched"
+        >Passwords do not match</mat-error
+        >
+      </mat-form-field>
+    </div>
+  
+    <button routerLink="/personal-info" type="submit" [disabled]="registerForm.invalid" >Create account</button>
+  </form>
+  <p>Already have an account? <a routerLink="/login">Login</a></p>
+  
+</div>
