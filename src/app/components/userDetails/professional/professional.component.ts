@@ -7,7 +7,7 @@ import {
   FormArray,
 } from '@angular/forms';
 import { ProfessionalSeviceService } from 'src/app/professional-sevice.service';
-
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-professional',
   templateUrl: './professional.component.html',
@@ -15,7 +15,7 @@ import { ProfessionalSeviceService } from 'src/app/professional-sevice.service';
 })
 export class ProfessionalComponent implements OnInit {
   levels: any = [1, 2, 3, 4, 5];
-  constructor(private fb: FormBuilder, private professionalSevice:ProfessionalSeviceService ) { }
+  constructor(private fb: FormBuilder, private professionalSevice:ProfessionalSeviceService, private router:Router ) { }
 
   ngOnInit(): void {
   }
@@ -55,6 +55,7 @@ export class ProfessionalComponent implements OnInit {
     console.log("this",details.value);
   
     this.professionalSevice.AddStudent(details);
+    this.router.navigate(['/skills']);
     
   }
   get validation() {
