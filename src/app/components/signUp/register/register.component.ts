@@ -48,7 +48,7 @@ get email() {
 
   
   registerNewUser() {
-    console.log("form values", this.registerForm.value);
+    console.log("form values", [this.registerForm.value]);
     this.newUserDetails = this.registerForm.value
     console.log("user details", this.newUserDetails);
     sessionStorage.setItem("register data", JSON.stringify([this.newUserDetails]));

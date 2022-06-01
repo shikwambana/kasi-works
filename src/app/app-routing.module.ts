@@ -10,12 +10,12 @@ import { SkillsComponent } from './components/userDetails/skills/skills.componen
 
 
 const routes: Routes = [
-  {
-    path: 'login', component: LoginComponent
-  },
-  {
-    path: 'register', component: RegisterComponent
-  },
+  // {
+  //   path: 'login', component: LoginComponent
+  // },
+  // {
+  //   path: 'register', component: RegisterComponent
+  // },
   {
   path: '', component: HomeComponent, children : [
     {
@@ -30,12 +30,12 @@ const routes: Routes = [
     {
       path: 'skills-info', component: SkillsComponent
     },
-    // {
-    //   path: 'register', component: RegisterComponent
-    // },
-    // {
-    //   path: 'login', component: LoginComponent
-    // }
+    {
+      path: 'register', component: RegisterComponent
+    },
+    {
+      path: 'login', component: LoginComponent
+    }
     
   ]
 }

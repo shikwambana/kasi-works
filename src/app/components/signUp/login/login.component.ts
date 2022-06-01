@@ -22,8 +22,8 @@ export class LoginComponent implements OnInit {
     return this.registerForm.get('password');
   }
   newUserInputs() {
-    console.log("form values", this.registerForm.value);
-    this.loginUserDetails = this.registerForm.value
+    console.log("form values", [this.registerForm.value]);
+    this.loginUserDetails = [this.registerForm.value]
     console.log("user details", this.loginUserDetails);
     sessionStorage.setItem("login data", JSON.stringify([this.loginUserDetails]));
   }

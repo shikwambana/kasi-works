@@ -32,7 +32,8 @@
     </mat-form-field>
   </div>
 
-  <button type="submit" [disabled]="registerForm.invalid">Login</button>
+  <button routerLink="/personal-info" type="submit" [disabled]="registerForm.invalid">Login</button>
+  
 </form>
 <p>Don't have an account? <a routerLink="/register">Register</a></p>
 <!-- <router-outlet></router-outlet> -->
