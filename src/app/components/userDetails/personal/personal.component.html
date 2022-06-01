@@ -1,7 +1,7 @@
 <div class="mainContainer" fxLayout="column" fxLayoutAlign="center center">
     <mat-card class="example-card " fxLayout="column" fxLayoutAlign="center start" fxFlex="80">
         <mat-card-content fxLayout="column" fxLayoutAlign="center center">
-            <p><b>personal Details</b></p>
+            <h1>personal Details</h1>
             <form [formGroup]="personalInfoForm" (ngSubmit)="onSubmit(personalInfoForm)">
 
                 <div fxLayout="row" fxLayoutAlign="space-between center">
@@ -131,7 +131,7 @@
                     </div>
                 </div>
                 <div fxLayout="row" fxLayoutAlign="center center">
-                    <button mat-raised-button type="submit" color="primary" [disabled]="!personalInfoForm.valid" routerLink="/professional-info">Submit</button>
+                    <button mat-raised-button type="submit" color="primary" [disabled]="!personalInfoForm.valid" routerLink="/professional-info">Complete</button>
                 </div>
             </form>
         </mat-card-content>
