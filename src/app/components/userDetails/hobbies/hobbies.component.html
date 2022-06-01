@@ -1,4 +1,3 @@
-<p>hobbies works!</p>
 <!-- Hobbies:
   type:the category of the hobbies={
       general
@@ -25,11 +24,13 @@ Description:Description of the hobbies
         <mat-label>Hobbies</mat-label>
         <input type="text" matInput placeholder="Enter a short description of the hobbie here" formControlName="discripOfHobbie"/>
     </mat-form-field> -->
-<form [formGroup]="hobbiesForm"  (ngSubmit)="onSubmit(hobbiesForm)">
-
-    <div formArrayName="hobbies">
-        <div *ngFor="let category of hobbiesForm.controls.hobbies['controls'];let i=index" [formGroupName]="i" style="width:100%">
-            <mat-form-field class="example-full-width" appearance="outline">
+<form [formGroup]="hobbiesForm"  (ngSubmit)="onSubmit(hobbiesForm)" fxLayout="column" fxLayoutAlign="center center" >
+    
+    <div  formArrayName="hobbies"fxFlex='80'>
+        <mat-card  >
+            <span fxLayout="row" fxLayoutAlign="center center"><h1>Hobbies</h1></span>
+        <div fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="10" *ngFor="let category of hobbiesForm.controls.hobbies['controls'];let i=index" [formGroupName]="i" style="width:100%">
+            <mat-form-field  class="example-full-width" appearance="outline">
                 <mat-label>Hobbies Category</mat-label>
                 <mat-select formControlName="category">
                     <mat-option *ngFor="let type of  categoriesOfHobbies" [value]="type" >
@@ -47,6 +48,7 @@ Description:Description of the hobbies
         </div>
         <button mat-raised-button type="submit">Submit</button>
         <!-- <div></div> -->
+      </mat-card>
     </div>
 
 

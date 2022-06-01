@@ -8,6 +8,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import {MatSelectModule} from '@angular/material/select';
 import {MatButtonModule} from '@angular/material/button';
+import {MatCardModule} from '@angular/material/card'; 
 //flex module
 import { FlexLayoutModule } from '@angular/flex-layout';
 // Import the functions you need from the SDKs you need
@@ -60,7 +61,8 @@ const analytics = getAnalytics(app);
     FlexLayoutModule,
     MatSelectModule,
     ReactiveFormsModule,
-    MatButtonModule
+    MatButtonModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]

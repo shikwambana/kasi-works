@@ -34,7 +34,7 @@ export class HobbiesComponent implements OnInit {
     addHobbies(){
       const control = <FormArray>this.hobbiesForm.controls.hobbies;
       control.push(this.fb.group({
-      categoriesOfHobbies:new FormControl(null,[Validators.required]),
+        category:new FormControl(null,[Validators.required]),
       discripOfHobbie:new FormControl(null,[Validators.required])
 })) 
       
