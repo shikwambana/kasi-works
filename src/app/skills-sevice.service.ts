@@ -24,4 +24,8 @@ type: skills.value['skillsArray'][0]['type'],
     })
 
 }
+
+read_Students() {
+  return this.firestore.collection('skills').snapshotChanges();
+}
 }

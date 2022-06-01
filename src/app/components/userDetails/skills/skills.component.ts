@@ -20,7 +20,10 @@ export class SkillsComponent implements OnInit {
   storeArray:any=[];
   constructor(private fb: FormBuilder , private service:SkillsSeviceService ) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+
+  
+  }
   
   skillsForm = new FormGroup({
     skillsArray: new FormArray([
@@ -63,4 +66,5 @@ export class SkillsComponent implements OnInit {
   get validation() {
     return this.skillsForm.controls;
   }
+
 }
