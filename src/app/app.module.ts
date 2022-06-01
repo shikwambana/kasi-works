@@ -3,9 +3,10 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-// Import the functions you need from the SDKs you need
+// !Firebase Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
+// !Components
 import { LoginComponent } from './components/signUp/login/login.component';
 import { RegisterComponent } from './components/signUp/register/register.component';
 import { PersonalComponent } from './components/userDetails/personal/personal.component';
@@ -13,15 +14,10 @@ import { ProfessionalComponent } from './components/userDetails/professional/pro
 import { SkillsComponent } from './components/userDetails/skills/skills.component';
 import { HobbiesComponent } from './components/userDetails/hobbies/hobbies.component';
 import { HomeComponent } from './components/home/home.component';
+// !Extra Modules
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatSelectModule} from '@angular/material/select';
-import { ReactiveFormsModule } from '@angular/forms';
-import { FormsModule } from '@angular/forms';
-import {MatFormFieldModule} from '@angular/material/form-field';
-import {MatInputModule} from '@angular/material/input';
-import {MatButtonModule} from '@angular/material/button';
-import { FlexLayoutModule } from '@angular/flex-layout';
-import {MatCardModule} from '@angular/material/card';
+
 
 // Import Firebase modules + environment
 import { AngularFireModule } from '@angular/fire/compat';
@@ -32,6 +28,16 @@ import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
 import { environment } from '../environments/environment';
 
 
+import { FlexLayoutModule } from '@angular/flex-layout';
+// !Angular Materials
+import {MatCardModule} from '@angular/material/card';
+import{ MatFormFieldModule} from '@angular/material/form-field';
+import {ReactiveFormsModule} from '@angular/forms';
+import { FormsModule } from '@angular/forms';
+import { MatInputModule } from '@angular/material/input';
+import { MatButtonModule,} from '@angular/material/button';
+import {MatIconModule} from '@angular/material/icon';
+import {MatDatepickerModule} from '@angular/material/datepicker';
 
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
@@ -78,6 +84,15 @@ const analytics = getAnalytics(app);
     AngularFirestoreModule,
     AngularFireStorageModule,
     AngularFireDatabaseModule,
+    FlexLayoutModule,
+    MatCardModule,
+    MatFormFieldModule,
+    ReactiveFormsModule,
+    FormsModule,
+    MatInputModule,
+    MatButtonModule,
+    MatIconModule,
+    MatDatepickerModule
   ],
   providers: [],
   bootstrap: [AppComponent]
