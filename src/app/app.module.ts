@@ -16,6 +16,18 @@ import { HobbiesComponent } from './components/userDetails/hobbies/hobbies.compo
 import { HomeComponent } from './components/home/home.component';
 // !Extra Modules
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatSelectModule} from '@angular/material/select';
+
+
+// Import Firebase modules + environment
+import { AngularFireModule } from '@angular/fire/compat';
+import { AngularFireAuthModule } from '@angular/fire/compat/auth';
+import { AngularFireStorageModule } from '@angular/fire/compat/storage';
+import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
+import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
+import { environment } from '../environments/environment';
+
+
 import { FlexLayoutModule } from '@angular/flex-layout';
 // !Angular Materials
 import {MatCardModule} from '@angular/material/card';
@@ -59,6 +71,19 @@ const analytics = getAnalytics(app);
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    ReactiveFormsModule,
+    FormsModule,
+    MatSelectModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatButtonModule,
+    MatCardModule,
+    FlexLayoutModule,  
+    AngularFireModule.initializeApp(firebaseConfig),
+    AngularFireAuthModule,
+    AngularFirestoreModule,
+    AngularFireStorageModule,
+    AngularFireDatabaseModule,
     FlexLayoutModule,
     MatCardModule,
     MatFormFieldModule,

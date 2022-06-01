@@ -25,6 +25,9 @@ const routes: Routes = [
       path: 'professional-info', component: ProfessionalComponent
     },
     {
+      path: 'skills', component: SkillsComponent
+    },
+    {
       path: 'hobbies-info', component: HobbiesComponent
     },
     {
