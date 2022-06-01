@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {
-  FormGroup,
+import {  FormGroup,
   FormControl,
   FormBuilder,
   Validators,

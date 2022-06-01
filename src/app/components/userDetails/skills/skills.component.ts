@@ -6,6 +6,7 @@ import {
   Validators,
   FormArray,
 } from '@angular/forms';
+import { Router } from '@angular/router';
 import { SkillsSeviceService } from 'src/app/skills-sevice.service';
 
 @Component({
@@ -17,13 +18,15 @@ export class SkillsComponent implements OnInit {
   skills: any = ['Medicine', 'Science', 'sport', 'IT', 'Artistry', 'design'];
   levels: any = [1, 2, 3, 4, 5];
   skillsFormArr: FormGroup;
-  storeArray:any=[];
-  constructor(private fb: FormBuilder , private service:SkillsSeviceService ) {}
+  storeArray: any = [];
+  constructor(
+    private fb: FormBuilder,
+    private service: SkillsSeviceService,
+    private router: Router
+  ) {}
 
-  ngOnInit(): void {
+  ngOnInit(): void {}
 
-  }
-  
   skillsForm = new FormGroup({
     skillsArray: new FormArray([
       this.fb.group({
@@ -48,22 +51,18 @@ export class SkillsComponent implements OnInit {
   }
 
   removeSkills(index: number) {
-   
-    if(index>0){
+    if (index > 0) {
       const control = <FormArray>this.skillsForm.controls.skillsArray;
       control.removeAt(index);
     }
-    
   }
 
-  onSubmit(details:any):any {
- 
-    console.log("this",details.value);
+  onSubmit(details: any): any {
+    console.log('this', details.value);
     this.service.AddStudent(details);
-    
+    this.router.navigate(['/hobbies-info']);
   }
   get validation() {
     return this.skillsForm.controls;
   }
-
 }
