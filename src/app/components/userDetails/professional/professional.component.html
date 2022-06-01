@@ -2,7 +2,7 @@
 fxLayoutAlign="center center">
 <mat-card >
 <form [formGroup]="professionalForm" fxLayout="column"
-fxLayoutAlign="center center">
+fxLayoutAlign="center center" (ngSubmit)="onSubmit(professionalForm)">
   <div formArrayName="professionalArray" class="center">
       
         <h1 fxLayout="column"
@@ -69,27 +69,26 @@ fxLayoutAlign="center center">
             enter position level</mat-error
           >
         </mat-form-field>
-        <div fxLayout="column" fxLayoutAlign="space-around center" gap="30">
+        <div fxLayout="row" fxLayoutAlign="space-around center" gap="30">
           
             <button
               mat-raised-button
-              class="greenBtn"
-              (click)="onSubmit(professionalForm)"
               (click)="addSkills()"
               [disabled]="!professionalForm.valid"
             >
-              + Add Skills
+              + Add
             </button>
             <button mat-raised-button color="warn" (click)="removeSkills(i)">
-              - remove skills
+              - remove
             </button>
           </div>
           <div fxLayout="row" fxLayoutAlign="space-around center" gap="30">
             <button
               mat-raised-button
-              (click)="onSubmit(professionalForm)"
+              type="submit"
               [disabled]="!professionalForm.valid"
               class="greenBtnBg"
+            
             >
               complete
             </button>

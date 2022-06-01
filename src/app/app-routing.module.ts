@@ -24,7 +24,7 @@ const routes: Routes = [
     },
     {
       path: 'skills', component: SkillsComponent
-    }
+    },
     
   ]
 }

@@ -4,7 +4,6 @@ import {
   AngularFireList,
   AngularFireObject,
 } from '@angular/fire/compat/database';
-import{doc,setDoc} from 'firebase/firestore'
 import { AngularFirestore } from '@angular/fire/compat//firestore';
 
 @Injectable({

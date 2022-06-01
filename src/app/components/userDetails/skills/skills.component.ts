@@ -21,6 +21,7 @@ export class SkillsComponent implements OnInit {
   constructor(private fb: FormBuilder , private service:SkillsSeviceService ) {}
 
   ngOnInit(): void {}
+  
   skillsForm = new FormGroup({
     skillsArray: new FormArray([
       this.fb.group({
@@ -54,7 +55,8 @@ export class SkillsComponent implements OnInit {
   }
 
   onSubmit(details:any):any {
-    console.log(details.value);
+ 
+    console.log("this",details.value);
     this.service.AddStudent(details);
     
   }

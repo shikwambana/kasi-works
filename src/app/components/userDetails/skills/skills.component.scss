@@ -1,22 +1,42 @@
-.example-form {
-    min-width: 150px;
-    max-width: 500px;
-    width: 100%;
-  }
+html,
+body {
+  height: 100%;
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  background-color: #f6f6f6;
+  color: #828282;
   
-  .example-full-width {
-    width: 100%;
-  }
-  .center{
-      margin: 100px 0px;
-  }
-  button{
-      margin: 10px;
-  }
-  .greenBtn{
-      color:green;
-  }
-  .greenBtnBg{
-      background-color: green;
-      color:white;
-  }
+
+}
+.mat-card{
+    width:40%;
+    margin: 50px;
+    
+}
+.header{
+    padding-top: 15px;
+    background: #f6f6f6;
+    box-shadow: 20px 20px 60px #009000,
+    
+}
+.panels{
+    margin-top: 0px;
+    .leftPanel{
+        padding-top: 50px;
+    }
+}
+button{
+    background-color: #009000;
+    color: white;
+    height: 40px;
+    width: -webkit-fill-available;
+    margin:10px;
+    text-align:center;
+}
+a {
+    text-decoration: none;
+    color: #009000;
+    font-weight: bolder;
+    font-size: large;
+
+}

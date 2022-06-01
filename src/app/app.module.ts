@@ -21,6 +21,7 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import {MatButtonModule} from '@angular/material/button';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import {MatCardModule} from '@angular/material/card';
 
 // Import Firebase modules + environment
 import { AngularFireModule } from '@angular/fire/compat';
@@ -70,6 +71,7 @@ const analytics = getAnalytics(app);
     MatFormFieldModule,
     MatInputModule,
     MatButtonModule,
+    MatCardModule,
     FlexLayoutModule,  
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFireAuthModule,

@@ -6,6 +6,7 @@ import {
   Validators,
   FormArray,
 } from '@angular/forms';
+import { ProfessionalSeviceService } from 'src/app/professional-sevice.service';
 
 @Component({
   selector: 'app-professional',
@@ -14,7 +15,7 @@ import {
 })
 export class ProfessionalComponent implements OnInit {
   levels: any = [1, 2, 3, 4, 5];
-  constructor(private fb: FormBuilder ) { }
+  constructor(private fb: FormBuilder, private professionalSevice:ProfessionalSeviceService ) { }
 
   ngOnInit(): void {
   }
@@ -33,7 +34,7 @@ export class ProfessionalComponent implements OnInit {
     const control = <FormArray>this.professionalForm.controls.professionalArray;
     control.push(
       this.fb.group({
-        type: new FormControl('', Validators.required),
+        companyName: new FormControl('', Validators.required),
         position: new FormControl('', Validators.required),
         positionDescription: new FormControl('', Validators.required),
         levelOfpositon: new FormControl('', Validators.required),
@@ -53,6 +54,7 @@ export class ProfessionalComponent implements OnInit {
   onSubmit(details:any):any {
     console.log("this",details.value);
   
+    this.professionalSevice.AddStudent(details);
     
   }
   get validation() {
