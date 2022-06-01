@@ -16,6 +16,25 @@ import { HobbiesComponent } from './components/userDetails/hobbies/hobbies.compo
 import { HomeComponent } from './components/home/home.component';
 // !Extra Modules
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+<<<<<<< HEAD
+import { ReactiveFormsModule } from '@angular/forms';
+import {MatCardModule} from '@angular/material/card';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input';
+import { MatRippleModule } from '@angular/material/core';
+import { MatNativeDateModule } from '@angular/material/core';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import {MatSelectModule} from '@angular/material/select';
+import {MatRadioModule} from '@angular/material/radio';
+import {MatButtonModule} from '@angular/material/button';
+import {MatIconModule} from '@angular/material/icon';
+import { FlexLayoutModule } from '@angular/flex-layout';
+
+import { AngularFireModule } from '@angular/fire/compat';
+import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
+import { environment } from '../environments/environment';
+import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
+=======
 import { FlexLayoutModule } from '@angular/flex-layout';
 // !Angular Materials
 import {MatCardModule} from '@angular/material/card';
@@ -27,6 +46,7 @@ import { MatButtonModule,} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 
+>>>>>>> 8dbe11bb33f8b62bde6ee149686c2d638ff3488b
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
@@ -56,8 +76,26 @@ const analytics = getAnalytics(app);
     HomeComponent
   ],
   imports: [
+    AngularFireModule.initializeApp(firebaseConfig),
+    AngularFirestoreModule,
+    AngularFireDatabaseModule,
     BrowserModule,
     AppRoutingModule,
+<<<<<<< HEAD
+    FlexLayoutModule,
+    MatIconModule,
+    BrowserAnimationsModule,
+    MatSelectModule,
+    MatInputModule,
+    MatRadioModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatButtonModule,
+    MatRippleModule,
+    MatFormFieldModule,
+    MatCardModule,
+    ReactiveFormsModule,
+=======
     BrowserAnimationsModule,
     FlexLayoutModule,
     MatCardModule,
@@ -68,6 +106,7 @@ const analytics = getAnalytics(app);
     MatButtonModule,
     MatIconModule,
     MatDatepickerModule
+>>>>>>> 8dbe11bb33f8b62bde6ee149686c2d638ff3488b
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -17,28 +17,31 @@ const routes: Routes = [
   //   path: 'register', component: RegisterComponent
   // },
   {
-  path: '', component: HomeComponent, children : [
-    {
-      path: 'personal-info', component: PersonalComponent
-    },
-    {
-      path: 'professional-info', component: ProfessionalComponent
-    },
-    {
-      path: 'hobbies-info', component: HobbiesComponent
-    },
-    {
-      path: 'skills-info', component: SkillsComponent
-    },
-    {
-      path: 'register', component: RegisterComponent
-    },
-    {
-      path: 'login', component: LoginComponent
-    }
-    
-  ]
-}
+    path: '', component: HomeComponent, children: [
+      {
+        path: 'personal-info', component: PersonalComponent
+      },
+      {
+        path: 'professional-info', component: ProfessionalComponent
+      },
+      {
+        path: 'skills', component: SkillsComponent
+      },
+      {
+        path: 'hobbies-info', component: HobbiesComponent
+      },
+      {
+        path: 'skills-info', component: SkillsComponent
+      },
+      {
+        path: 'register', component: RegisterComponent
+      },
+      {
+        path: 'login', component: LoginComponent
+      }
+
+    ]
+  }
 ];
 
 @NgModule({

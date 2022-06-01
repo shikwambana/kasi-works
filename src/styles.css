@@ -1,0 +1,39 @@
+/* You can add global styles to this file, and also import other style files */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  background-color: #f6f6f6;
+  color: #828282;
+}
+
+.header {
+  padding-top: 15px;
+  background: #f6f6f6;
+  -webkit-box-shadow: 20px 20px 60px #009000;
+          box-shadow: 20px 20px 60px #009000;
+}
+
+.panels {
+  margin-top: 0px;
+}
+
+.panels .leftPanel {
+  padding-top: 50px;
+}
+
+button {
+  background-color: #009000;
+  color: white;
+  height: 40px;
+  width: -webkit-fill-available;
+}
+
+a {
+  text-decoration: none;
+  color: #009000;
+  font-weight: bolder;
+  font-size: large;
+}
+/*# sourceMappingURL=styles.css.map */

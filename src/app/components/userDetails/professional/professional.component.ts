@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormBuilder } from '@angular/forms';
 
 @Component({
   selector: 'app-professional',
@@ -6,10 +7,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./professional.component.scss']
 })
 export class ProfessionalComponent implements OnInit {
+  personalInfoForm: FormGroup;;
 
-  constructor() { }
+  constructor(private formBuilder: FormBuilder) {
+    this.personalInfoForm = this.formBuilder.group({
+      firstName:['']
+    })
+   }
 
   ngOnInit(): void {
   }
 
+  onSubmit(form: any){
+    console.log(form, "Form");
+  }
 }
